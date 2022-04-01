@@ -1,7 +1,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
+#define _default_layer 0
+#define _lower_layer 1
+#define _raise_layer 2
+#define _both_layer 3
 / {
         keymap {
                 compatible = "zmk,keymap";
