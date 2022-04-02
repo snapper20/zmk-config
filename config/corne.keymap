@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+
 #define _default_layer 0
 #define _lower_layer 1
 #define _raise_layer 2
@@ -61,15 +63,15 @@
                 
                  both_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |VOLUP| MUTE|PAUSE|     | PREV| NEXT |
+// |      |     |     |     |     |EPOFF|   |VOLUP| MUTE|PAUSE|     | PREV| NEXT |
 // | CTRL |     |     |     |     |     |   |VOLDN|     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   |SHIFT|     | RET |
       bindings = <
-        &none     &none    &kp UP   &none     &none  &none   &kp C_VOL_UP &kp C_MUTE   &kp C_PP &none &kp C_PREV &kp C_NEXT 
-        &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &none  &none   &kp C_VOL_DN &none        &none    &none &none      &none 
-        &none     &none    &none    &none     &none  &none   &none        &none        &none    &none &none      &none 
-                                    &none     &trans &none   &none        &trans       &none 
+        &none     &none    &kp UP   &ext_power EP_OFF &none  &none   &kp C_VOL_UP &kp C_MUTE   &kp C_PP &none &kp C_PREV &kp C_NEXT 
+        &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT         &none  &none   &kp C_VOL_DN &none        &none    &none &none      &none 
+        &none     &none    &none    &none             &none  &none   &none        &none        &none    &none &none      &none 
+                                    &none             &trans &none   &none        &trans       &none 
                         >;    
       
                 };
