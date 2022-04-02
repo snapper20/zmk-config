@@ -5,7 +5,16 @@
 #define _lower_layer 1
 #define _raise_layer 2
 #define _both_layer 3
+
 / {
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        both_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+};
         keymap {
                 compatible = "zmk,keymap";
 
