@@ -63,15 +63,15 @@
                 
                  both_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |EPOFF|   |VOLUP| MUTE|PAUSE|     | PREV| NEXT |
-// | CTRL |     |     |     |     |EPON |   |VOLDN|     |     |     |     |      |
+// |      |     |  UP |     |     |EPOFF|   |VOLUP| MUTE|PAUSE|     | PREV| NEXT |
+// | CTRL | LEFT| DOWN|RIGHT|     |EPON |   |VOLDN|     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   |SHIFT|     | RET |
       bindings = <
-        &none     &none    &kp UP   &ext_power EP_OFF &none  &none   &kp C_VOL_UP &kp C_MUTE   &kp C_PP &none &kp C_PREV &kp C_NEXT 
-        &kp LCTRL &kp LEFT &kp DOWN &ext_power EP_ON  &none  &none   &kp C_VOL_DN &none        &none    &none &none      &none 
-        &none     &none    &none    &none             &none  &none   &none        &none        &none    &none &none      &none 
-                                    &none             &trans &none   &none        &trans       &none 
+        &none     &none    &kp UP   &none     &none  &ext_pwer EP_OFF   &kp C_VOL_UP &kp C_MUTE &kp C_PP &none &kp C_PREV &kp C_NEXT 
+        &kp LCTRL &kp LEFT &kp DOWN &kp RIGHT &none  &ext_power EP_ON   &kp C_VOL_DN &none      &none    &none &none      &none 
+        &none     &none    &none    &none     &none  &none              &none        &none      &none    &none &none      &none 
+                                    &none     &trans &none              &none        &trans     &none 
                         >;    
       
                 };
